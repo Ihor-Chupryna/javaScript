@@ -24,7 +24,7 @@ function createParagraphWithText(text = ' ') {
     document.write(`<p>${text}</p>`);
 }
 
-createParagraphWithText('Hello world')
+createParagraphWithText('Hello world');
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 // function createList(text = ' ') {
