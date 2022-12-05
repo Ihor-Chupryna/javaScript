@@ -219,4 +219,56 @@ const cut = cutStr(strForCut, 5);
 console.log(cut);
 
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+const books = [
+    { title: 'land of the dead', pages: 256, authors: ['ivanov'], genres: ['drama', 'horror'] },
+    {
+        title: 'god of war',
+        pages: 128,
+        authors: ['boyko', 'lesin', 'sokolova',],
+        genres: ['fantasy', 'adventures', 'detective',]
+    },
+    { title: 'star wars', pages: 512, authors: ['polischyk'], genres: ['fantasy'] },
+    { title: 'uncharted', pages: 196, authors: ['petrov', 'levenda'], genres: ['adventures'] },
+]
 
+// -знайти наібльшу книжку.
+const maxPages = (array = []) => {
+    let descendingBookPages = array.sort((a, b) => b.pages - a.pages);
+    return descendingBookPages[0];
+}
+const bookWithMaxPages = maxPages(books);
+console.log(bookWithMaxPages);
+
+// - знайти книжку/ки з найбільшою кількістю жанрів
+const maxGenres = (array = []) => {
+    let descendingGenresLength = array.sort((a, b) => b.genres.length - a.genres.length);
+    return descendingGenresLength[0];
+}
+let bookWithMaxGenres = maxGenres(books);
+console.log(bookWithMaxGenres);
+
+// - знайти книжку/ки з найдовшою назвою
+const maxTitleLength = (array) => {
+    let descendingTitleLength = array.sort((a, b) => b.title.length - a.title.length);
+    return descendingTitleLength[0]
+}
+let bookWithMaxLength = maxTitleLength(books);
+console.log(bookWithMaxLength);
+
+// - знайти книжку/ки які писали 2 автори
+const withTwoAuthors = (array) => {
+    return array.find(value => value.authors.length === 2);
+}
+let bookWithTwoAuthors = withTwoAuthors(books);
+console.log(bookWithTwoAuthors);
+
+// - знайти книжку/ки які писав 1 автор
+const withOneAuthor = (array) => {
+    return array.find(value => value.authors.length === 1)
+}
+let bookWithOneAuthor = withOneAuthor(books);
+console.log(bookWithOneAuthor);
+
+// - вісортувати книжки по кількості сторінок по зростанню
+const sortBooksPagesAscending = books.sort((a, b) => a.pages - b.pages);
+console.log(sortBooksPagesAscending);
