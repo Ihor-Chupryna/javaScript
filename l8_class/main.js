@@ -81,7 +81,6 @@ console.log(sortClientByPurchases);
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-
 function Car(model, factory, year, maxSpeed, engine) {
     this.model = model;
     this.factory = factory;
@@ -159,6 +158,51 @@ class SuperCar {
 }
 
 const ford = new SuperCar('mustang', 'ford', 1967, 240, 7);
+ford.drive();
+ford.info();
+ford.increaseMaxSpeed(25);
+ford.changeYear(2020);
+ford.addDriver({ name: 'Dima' });
+console.log(ford);
 
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+class Cinderella {
+    constructor(name, age, footSize) {
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize;
+    }
+}
 
+const cinderellas = [];
+cinderellas[0] = new Cinderella('Anna', 25, 34);
+cinderellas[1] = new Cinderella('Ella', 30, 39);
+cinderellas[2] = new Cinderella('Ulyana', 19, 37);
+cinderellas[3] = new Cinderella('Tatyana', 27, 36);
+cinderellas[4] = new Cinderella('Natalia', 22, 40);
+cinderellas[5] = new Cinderella('Ksenia', 20, 38);
+cinderellas[6] = new Cinderella('Irina', 21, 36);
+cinderellas[7] = new Cinderella('Anastasia', 31, 35);
+cinderellas[8] = new Cinderella('Yelena', 26, 36);
+cinderellas[9] = new Cinderella('Ksenia', 18, 39);
 
+// /     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+class Prince {
+    constructor(name, age, foundShoes) {
+        this.name = name;
+        this.age = age;
+        this.foundShoes = foundShoes;
+    }
+}
+
+const prince = new Prince('Oleg', 33, 35);
+for (const cinderella of cinderellas) {
+    if (cinderella.footSize === prince.foundShoes) {
+        console.log(cinderella);
+    }
+}
+
+// Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+const findCinderella = cinderellas.find(value => value.footSize === prince.foundShoes);
+console.log(findCinderella);
