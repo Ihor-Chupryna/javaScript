@@ -208,7 +208,7 @@ let coursesAndDurationArrayCopy = [
 
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу,
 // та <p class='description'> з monthDuration елементу.
-//     Завдання робити через цикли.
+// Завдання робити через цикли.
 const coursesDivWithClass = document.createElement('div');
 for (const course of coursesAndDurationArrayCopy) {
     const headingH1 = document.createElement('h1');
