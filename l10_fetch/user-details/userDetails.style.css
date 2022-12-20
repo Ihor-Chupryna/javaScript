@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background: black;
+    text-align: center;
+    color: #ff7b00;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid wheat;
+}
+
+.user-details {
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: black;
+    box-sizing: border-box;
+    color: burlywood;
+    padding: 25px 0 25px 30px;
+
+}
+
+.user-details h2 {
+    margin-left: 70px;
+    font-size: 35px;
+}
+
+.user-details p {
+    font-size: 28px;
+}
+
+.user-address, .user-company {
+    padding: 15px;
+}
+
+.user-address p, .user-company p {
+    padding: 15px;
+    font-size: 19px;
+}
+
+.user-address h2, .user-company h2 {
+    font-size: 25px;
+}
+
+span {
+    color: tomato;
+}
+
+
