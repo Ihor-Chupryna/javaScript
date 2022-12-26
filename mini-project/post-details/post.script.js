@@ -22,6 +22,7 @@ const commentsDiv = document.createElement('div');
 commentsDiv.classList.add('comments-list');
 commentsHeader.innerText = 'Comments:';
 postDetailsDiv.appendChild(commentsDiv);
+
 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
     .then((response) => response.json())
     .then((comments) => comments.map(comment => {
