@@ -22,7 +22,6 @@ function objectIter(obj) {
                 userItemP.innerHTML = `<span>${key}:</span> ${obj[key]}`;
                 userDetailsDiv.appendChild(userItemP);
             }
-            ``
         }
     }
 }
@@ -52,7 +51,7 @@ userPostsButton.onclick = () => {
                     document.location.href = `../post-details/post.details.html?data=${JSON.stringify(post)}`;
                 }
                 userPostsDiv.appendChild(postItem);
-            })
+            });
         });
 }
 userDetailsDiv.appendChild(userPostsButton);
