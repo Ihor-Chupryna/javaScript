@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    height: 70px;
+    background: burlywood;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: 1px solid black;
+}
+
+h2 {
+    margin: 0;
+}
+
+.users-list {
+    background: #424b42;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px 0 25px 0;
+    box-sizing: border-box;
+}
+
+.user {
+    display: flex;
+    width: 45vw;
+    align-items: center;
+    row-gap: 35px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid burlywood;
+}
+
+.user button {
+    width: 120px;
+    height: 30px;
+    background: burlywood;
+    border-radius: 15px;
+}
