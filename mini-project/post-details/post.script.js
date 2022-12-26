@@ -5,10 +5,10 @@ const postDetailsDiv = document.createElement('div');
 postDetailsDiv.classList.add('post-details');
 document.body.appendChild(postDetailsDiv);
 
-const previousPostDetailsPage = document.createElement('a');
-previousPostDetailsPage.innerText = 'back';
-previousPostDetailsPage.href = `../user-details/user.details.html`;
-postDetailsDiv.appendChild(previousPostDetailsPage);
+const previousPage = document.createElement('a');
+previousPage.innerText = 'back';
+previousPage.href = `../user-details/user.details.html`;
+postDetailsDiv.appendChild(previousPage);
 
 for (const key in post) {
     const postItem = document.createElement('p');

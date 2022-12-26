@@ -4,10 +4,10 @@ const userDetailsDiv = document.createElement('div');
 userDetailsDiv.classList.add('user-details');
 document.body.appendChild(userDetailsDiv);
 
-const previousUserDetailsPage = document.createElement('a');
-previousUserDetailsPage.innerText = 'back';
-previousUserDetailsPage.href = `../index.html`;
-userDetailsDiv.appendChild(previousUserDetailsPage);
+const previousPage = document.createElement('a');
+previousPage.innerText = 'back';
+previousPage.href = `../index.html`;
+userDetailsDiv.appendChild(previousPage);
 
 function objectIter(obj) {
     if (typeof obj === 'object') {
