@@ -23,11 +23,11 @@ commentsDiv.classList.add('comments-list');
 postDetailsDiv.appendChild(commentsDiv);
 commentsHeader.innerText = 'Comments:';
 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
-  .then((response) => response.json())
-  .then((comments) => comments.map(comment => {
-      const commentItem = document.createElement('p');
-      commentItem.classList.add('comment');
-      commentItem.innerText = `- ${comment.name}`;
-      commentsDiv.append(commentItem);
-  }));
+    .then((response) => response.json())
+    .then((comments) => comments.map(comment => {
+        const commentItem = document.createElement('p');
+        commentItem.classList.add('comment');
+        commentItem.innerText = `- ${comment.name}`;
+        commentsDiv.append(commentItem);
+    }));
 
